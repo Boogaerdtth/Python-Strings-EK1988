@@ -22,17 +22,19 @@ print(report)
 #1
 player = 'Oleksij Mychajlytsjenko'
 #2
-first_name = player[0:7]
+first_name = player[0:player.find(" ")]
 print(first_name)
 #3
-last_name_len = len(player[8:])
+last_name_len = len(player[player.find(" ")+1:])
 print(last_name_len)
+space_last_name = last_name_len != (" ")
+print(space_last_name)
 #4
 name_short = f"{player[0]}. {player[8:]}"
 print(name_short)
 #5
-chant = (first_name + "!!! ") * (len(player[0:7]))
+chant = (first_name + "!!! ") * (len(player[0:7])) #(len(first_name))
 print(chant)
 #6
-#good_chant != chant
-#print(good_chant)
+good_chant = chant != (" ")
+print(good_chant)
